@@ -113,7 +113,11 @@
       </section>
       <div class="card shadow-lg p-4 mb-5">
         <h1 class="mb-4 text-primary" id="picker-section">🎉 Demo 🎉</h1>
-        <button id="pick-winner-btn" class="btn btn-danger btn-lg">
+        <button
+          id="pick-winner-btn"
+          class="btn btn-danger btn-lg"
+          onclick="showWinnerMessage(), showRandomEmoji()"
+        >
           Pick a Winner
         </button>
         <div id="winner-display" class="mt-4 p-3 fs-4 fw-bold text-dark"></div>
@@ -150,7 +154,11 @@
                       >Add to start</label
                     >
                   </div>
-                  <button id="submit-comment" class="btn btn-primary">
+                  <button
+                    id="submit-comment"
+                    class="btn btn-primary"
+                    onclick="addComment()"
+                  >
                     Add
                   </button>
                 </div>
@@ -163,8 +171,8 @@
             <h3>All Comments</h3>
             <button id="reverse-list" class="btn btn-outline-primary">
               Reverse List
-            </button>
-            <button id="filter-emoji" class="btn btn-outline-primary">
+            </button onclick="reverseOrder()">
+            <button id="filter-emoji" class="btn btn-outline-primary" onclick="filterEmojiComments()">
               Hide Emoji-Only
             </button>
             <div class="d-flex gap-2">
